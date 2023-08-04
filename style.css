@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body{
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Main Section */
+#main{
+    height: 100vh;
+    color: aliceblue;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Card View */
+#card{
+    height: 450px;
+    border: 2px solid #ffffff30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+}
+
+/* Heading */
+#heading{
+    position: relative;
+    top: -1rem
+}
+
+/* Matrix */
+#matrix{
+    display: grid;
+    grid-template-columns: repeat(3,3rem);
+    grid-template-rows: repeat(3,3rem);
+}
+.box{
+    border: 1px solid black;
+    font-size: 5vw;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box:hover{
+    cursor: pointer;
+    border: 0;
+    background: #6ba5c70c;
+    backdrop-filter: blur(15px);
+}
+
+/* Button */
+button{
+    margin-top: 0.7rem;
+    height: 25px;
+    width: 70px;
+    border: 0;
+    outline: 0;
+    font-size: medium;
+    text-align: center;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #7166d3;
+    border: 1px solid black;
+    color: #ffffff;
+}
+
+
+/* Circles */
+.circle1 {
+    position: fixed;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    animation: circle1Animate 15s infinite;
+  }
+  
+  @keyframes circle1Animate {
+    50% {
+      left: 33%;
+      top: 4%;
+      scale: 1.11;
+    }
+  }
+  
+  .circle2 {
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    width: 19em;
+    height: 19em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circle2Animate 8s infinite;
+  }
+  @keyframes circle2Animate {
+    50% {
+      bottom: 6%;
+      right: 31%;
+    }
+  } 
+
+/* Remove Sides */
+.btl{
+    border-top: 0;
+    border-left: 0;
+}
+.bt{
+    border-top: 0;
+}
+.btr{
+    border-top: 0;
+    border-right: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.blb{
+    border-left: 0;
+    border-bottom: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.brb{
+    border-right: 0;
+    border-bottom: 0;
+}
+
+/* Line */
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+/* Player div */
+.players{
+    border: 2px solid #0909ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 24px;
+}
+.players div{
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+}
+.players div.active{
+    background: #0909ad;
+    color: #fff;
+}
+
+/* Result */
+
+#winningTxt{
+    display: none;
+}
+
+
+/* Mobile View */
+/* @media screen and (max-width:360px){
+    #matrix{
+        display: grid;
+        grid-template-columns: repeat(3,14rem);
+        grid-template-rows: repeat(3,14rem);
+        position: relative;
+    }
+} */
+
+/* Tab View */
+@media screen and (max-width:810px){
+    #matrix{
+        display: grid;
+        grid-template-columns: repeat(3,9vw);
+        grid-template-rows: repeat(3,9vw);
+        position: relative;
+    }
+    .circle1 {
+        top: 20%;
+    }
+    .circle2 {
+        bottom: 15%;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icons/game.png" type="image/x-icon" />
+    <title>Tic-Toc</title>
+  </head>
+  <body>
+    <section id="main">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div id="card">
+        <div id="heading">
+          <h1>Tic - Toc Game</h1>
+        </div>
+        <div class="players">
+          <div class="player1 active">O's Turn</div>
+          <div class="player2">X's Turn</div>
+       </div>
+        <div id="matrix">
+          <div class="line"></div>
+          <!-- Area of Matrix -->
+          <div class="box btl"><span id="g"></span></div>
+          <div class="box bt"><span id="g"></span></div>
+          <div class="box btr"><span id="g"></span></div>
+          <div class="box bl"><span id="g"></span></div>
+          <div class="box"><span id="g"></span></div>
+          <div class="box br"><span id="g"></span></div>
+          <div class="box blb"><span id="g"></span></div>
+          <div class="box bb"><span id="g"></span></div>
+          <div class="box brb"><span id="g"></span></div>
+        </div>
+        <h1 id="winningTxt">X Win the Game</h1>
+        <button>Reset</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
